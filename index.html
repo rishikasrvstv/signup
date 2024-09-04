@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page | UI Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            overflow: hidden;
+            margin-left: 0;
+            margin-top: 0;
+
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .super-main {
+            margin: ;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            width:110vw;
+
+            background: url("https://images.unsplash.com/photo-1546437744-529610df132e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA3fHxzb2Z0JTIwYmx1ZSUyMGxhbmRzY2FwZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D") no-repeat center center;
+            background-size: cover;
+            
+            transform: skew(0deg);
+            /* Fallback color for the right half */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+        }
+
+
+        .container {
+            display: flex;
+            width: 800px;
+            height: 500px;
+            background: #f0f0f0;
+            border: 17px solid #f0f0f0;
+            border-radius: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .left-section {
+            width: 50%;
+            padding: 20px;
+            color: #fff;
+            background: url("./img.jpg") no-repeat;
+            
+            background-size: cover;
+            background-position: center;
+
+            border-right: 10px solid #fff;
+            /* BORDER-BOTTOM: 10px solid #fff; */
+            border-color: #f0f0f0;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            z-index: 2;
+            clip-path: polygon(0 0, 100% 0, 86% 100%, 0% 100%);
+            /* transform: skew(-4deg); */
+            overflow: hidden;
+            position: relative;
+            
+        }
+
+
+        .inner-content {
+            transform: skew(-2deg);
+            /* Counter skew to align inner contents */
+            padding: 10px;
+            position: relative;
+            /* Adjust padding to prevent skew effect from cutting content */
+        }
+
+        .left-section h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            font-weight: 600;
+            .left-section h2 {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflow */
+    text-overflow: ellipsis; /* Add an ellipsis if the text overflows */
+    max-width: 100%; /* Ensure the text does not overflow its container */
+}
+        }
+
+        .left-section .profile {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        
+        .left-section .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .right-section {
+            width: 50%;
+            background-color: #f0f0f0;
+            /* Match color with the slant side */
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .right-section {
+            width: 50%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #f0f0f0;
+
+        }
+
+        .right-section-main {
+            width: 100%;
+            height: 100%;
+
+
+        }
+
+        .right-section h1 {
+            margin: 0;
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .right-section p {
+            margin: 0px 0 10px;
+            color: #666;
+        }
+
+        .input-group {
+            margin-bottom: 2px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 20px;
+        }
+
+        .input-group input:focus {
+            border-color: #ff4b5c;
+        }
+
+        .forgot-password {
+            display: flex;
+            /* Align the text */
+            justify-content: flex-end;
+            /* Aligns text to the right */
+            margin-bottom: 20px;
+            margin-top: -20px;
+            /* Adds some space below */
+        }
+
+        .forgot-password-link {
+            color: #151340;
+            /* Color for the link */
+            text-decoration: none;
+            /* Remove underline */
+            font-size: 15px;
+            /* Font size */
+        }
+
+        .forgot-password-link:hover {
+            text-decoration: underline;
+            /* Underline on hover */
+            color: #ff4b5c;
+            /* Change color on hover */
+        }
+
+
+        .button {
+            background-color: #ff4b5c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 2px;
+            font-size: 15px;
+            text-decoration: none;
+            /* Ensures the button looks like a button, not a link */
+            display: inline-block;
+            /* Keeps the button inline with the text */
+            width: 90px;
+            height: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button:hover {
+            background-color: #ff1e39;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .social-buttons a {
+            color: #666;
+            font-size: 20px;
+            margin: 0 10px;
+
+        }
+
+        .btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .google-signup {
+            background-color: #5584cf;
+            /* Google's blue color */
+            color: #eedede;
+            padding: 15px 20px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            text-decoration: none;
+            /* Remove underline */
+            font-size: 16px;
+            width: 100%;
+            /* Full width */
+            max-width: 300px;
+            /* Maximum width */
+        }
+
+        .google-signup i {
+            margin-right: 8px;
+            /* Space between the icon and text */
+        }
+
+        .google-signup:hover {
+            background-color: #357ae8;
+            /* Darker blue on hover */
+        }
+
+        .color-panel {
+            position: absolute;
+            width: 67vw;
+            height: 100vh;
+            background-color: #dadada;
+            transform: skew(-5deg);
+            right: -200px;
+            top: 0;
+        }
+
+        .main {
+            z-index: 9999;
+            position: absolute;
+            top: 50%;
+            width: 30vh;
+            /* Moves the top of the div to the middle of the viewport */
+            left: 28%;
+            /* Moves the left of the div to the middle of the viewport */
+            transform: translate(-50%, -50%);
+        }
+
+        .color-panel {
+            z-index: 1
+        }
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            transform: skew(5deg);
+        }
+
+        .profile {
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            display: flex;
+
+            align-items: center;
+            transform: none;
+            /* Counter skew to keep the profile straight */
+        }
+
+        .btn-hero-1 {
+            width: 75px;
+            height: 35px;
+            background-color: transparent;
+            color: white;
+            border-color: transparent;
+
+        }
+
+        .btn-hero-2 {
+            width: 75px;
+            height: 35px;
+            background-color: transparent;
+            border-color: white;
+            border: 2px solid;
+            border-radius: 20px;
+            color: white;
+        }
+        .rishika-ui{
+            position: absolute;
+            /* background-color: #dadada; */
+            width: 70px;
+            height: 60px;
+            bottom: 1px;
+            left: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        .rishika-ui img{
+            height: 80%;
+            width: 100%;
+            /* border: 1px solid white; */
+            border-radius: 50%;
+            bottom: 1px;
+            
+        }
+        .rishika-ui h1 {
+    font-size: 20px; /* Adjust the size to your preference */
+    margin: 0; /* Remove any default margin */
+}
+        @media (max-width: 1200px) {
+    .container {
+        width: 90%;
+        height: auto; /* Adjust height to auto for better responsiveness */
+        flex-direction: column; /* Stack sections on smaller screens */
+    }
+
+    .left-section, 
+    .right-section {
+        width: 100%; /* Set both sections to take full width */
+        border: none; /* Remove border on smaller screens */
+        border-radius: 0; /* Remove rounded corners */
+        padding: 20px; /* Adjust padding */
+        clip-path: none; /* Remove clip-path to avoid cutting content */
+    }
+
+    .right-section {
+        padding: 30px; /* Add some padding for the right section */
+    }
+
+    .right-section h1 {
+        font-size: 36px; /* Adjust font size */
+        top: 2px;
+    }
+
+    .right-section p {
+        font-size: 18px; /* Adjust paragraph font size */
+    }
+
+    .input-group input {
+        font-size: 18px; /* Adjust input font size */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .button {
+        width: 100%; /* Full width buttons on smaller screens */
+        height: auto; /* Adjust height */
+        padding: 15px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .super-main {
+        padding: 20px; /* Add padding for smaller screens */
+    }
+
+    .container {
+        width: 100%; /* Full width container */
+        height: auto; /* Auto height */
+        flex-direction: column; /* Stack sections */
+    }
+
+    .right-section {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .left-section h2 {
+        font-size: 30px; /* Adjust font size */
+    }
+
+    .right-section h1 {
+        font-size: 28px; /* Adjust font size */
+    }
+
+    .button {
+        font-size: 15px; /* Adjust button font size */
+        padding: 15px; /* Adjust padding */
+    }
+}
+.company-logo {
+    position: absolute; /* Use absolute positioning */
+    top: 20px;
+    left: 15px; /* Distance from the top */
+    right: 100px; /* Distance from the right */
+    display: flex; /* Display elements in a row */
+    align-items: center; /* Center the items vertically */
+    gap: 10px; /* Space between the logo and company name */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.company-logo .logo {
+    height: 50px; /* Adjust logo size */
+    width: auto; /* Keep aspect ratio */
+}
+
+.company-logo .company-name {
+    font-size: 18px; /* Adjust font size */
+    color: #fff; /* Change color to match your theme */
+    font-weight: bold; /* Make the text bold */
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%; /* Full width for sections */
+        padding: 10px; /* Reduce padding */
+        border: none; /* Remove borders */
+    }
+
+    .right-section h1 {
+        font-size: 24px; /* Adjust heading font size */
+    }
+
+    .input-group input {
+        font-size: 16px; /* Adjust input font size */
+    }
+
+    .forgot-password-link {
+        font-size: 14px; /* Adjust link font size */
+    }
+
+    .button {
+        width: 100%; /* Full width buttons */
+        font-size: 14px; /* Smaller font size */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .google-signup {
+        width: 100%; /* Full width for signup button */
+        max-width: none; /* Remove max-width restriction */
+    }
+}
+.terms-conditions {
+    display: flex;
+    align-items: center;
+    margin-top: 15px 0; /* Add some space above the checkbox */
+    margin-bottom: 10px; /* Add some space below the checkbox */
+    font-size: 15px; /* Adjust font size */
+    color: #333;
+    align-items: center;
+    margin-left: 50px; /* Text color */
+}
+
+.terms-conditions input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+    width: 16px; /* Checkbox width */
+    height: 16px; /* Checkbox height */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.terms-conditions label {
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="company-logo">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.0jl9haemnq0P4eYzzrfNOgHaGw&pid=Api" alt="Company Logo" class="logo">
+        <span class="company-name">XYZ</span>
+    </div>
+    
+    <div class="super-main">
+        <div class="color-panel">
+
+        </div>
+        <div class="main">
+            <div class="container">
+                <div class="left-section">
+                    <div class="inner-content">
+                        <div class="heading">
+                            <h2>YOUR WORKS</h2>
+                            <button class="btn-hero-1">JOIN US</button>
+                            <button class="btn-hero-2"> CREATE</button>
+                        </div>
+                        <div class="profile">
+                            <!-- <img src="https://plus.unsplash.com/premium_photo-1672329273045-fc09b2298fcc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Profile Image"> -->
+                            <!-- <div class="rishika-ui">
+                                <p style="margin:0;">rishika.ui</p>
+                                <span>UI design</span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="rishika-ui">
+                         <img src="https://up.yimg.com/ib/th?id=OIP.GHGGLYe7gDfZUzF_tElxiQHaHa&pid=Api&rs=1&c=1&qlt=95&w=117&h=117"
+                                alt="Profile Image">
+                        <h1>Rishika.ui</h1>
+                    </div>
+                </div>
+
+                <div class="right-section">
+                    <div class="right-section-main">
+                        <h1>Hi Developer!</h1>
+                        <p>Welcome to frontenddev</p>
+                        <div class="input-group">
+                            <input type="text" placeholder="First Name">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Last Name">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div class="terms-conditions">
+                            <input type="checkbox" id="terms-checkbox">
+                            <label for="terms-checkbox">Accept terms and conditions</label>
+                        </div>
+                        
+                       
+                        <div class="btn"><a href="#" class="button">Sign Up</a></div>
+                        <div class="btn">
+                            <!-- Wrap the entire text in an anchor tag to make it a clickable link -->
+                            <a href="#"
+                                style="color: #151340; text-decoration: none; margin-top: 10px; display: block; font-size: 15px;">
+                                Already have an account? Login
+                            </a>
+                        </div>
+                        
+                        <div class="social-buttons">
+                            <a href="#"><i class="fab fa-google"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
